@@ -1,0 +1,341 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Circular Statistics &mdash; circularstats v0.1 documentation</title>
+    <link rel="stylesheet" href="_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '',
+        VERSION:     '0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="top" title="circularstats v0.1 documentation" href="index.html" />
+    <link rel="next" title="circularstats.api.Circular" href="generated/circularstats.api.Circular.html" />
+    <link rel="prev" title="Welcome to circularstats’s documentation!" href="index.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="generated/circularstats.api.Circular.html" title="circularstats.api.Circular"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="index.html" title="Welcome to circularstats’s documentation!"
+             accesskey="P">previous</a> |</li>
+        <li><a href="index.html">circularstats v0.1 documentation</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="circular-statistics">
+<h1>Circular Statistics<a class="headerlink" href="#circular-statistics" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="introduction">
+<h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h2>
+<p>Working with circular data</p>
+</div>
+<div class="section" id="circular-data-description">
+<span id="api"></span><h2>Circular Data Description<a class="headerlink" href="#circular-data-description" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr><td><a class="reference internal" href="generated/circularstats.api.Circular.html#circularstats.api.Circular" title="circularstats.api.Circular"><tt class="xref py py-obj docutils literal"><span class="pre">Circular</span></tt></a>([low,&nbsp;upp,&nbsp;units,&nbsp;modulo,&nbsp;rad_low,&nbsp;...])</td>
+<td>Class to keep track of circular data</td>
+</tr>
+<tr><td><a class="reference internal" href="generated/circularstats.api.circ_axial.html#circularstats.api.circ_axial" title="circularstats.api.circ_axial"><tt class="xref py py-obj docutils literal"><span class="pre">circ_axial</span></tt></a>(alpha[,&nbsp;m])</td>
+<td>Transform p-axial data to a common scale (0, 2pi) in radians.</td>
+</tr>
+<tr><td><a class="reference internal" href="generated/circularstats.api.degrees.html#circularstats.api.degrees" title="circularstats.api.degrees"><tt class="xref py py-obj docutils literal"><span class="pre">degrees</span></tt></a></td>
+<td>Predefined instance of <tt class="docutils literal"><span class="pre">Circular</span></tt> for degrees in (0, 360)</td>
+</tr>
+<tr><td><a class="reference internal" href="generated/circularstats.api.clock24.html#circularstats.api.clock24" title="circularstats.api.clock24"><tt class="xref py py-obj docutils literal"><span class="pre">clock24</span></tt></a></td>
+<td>Predefined instance of <tt class="docutils literal"><span class="pre">Circular</span></tt> for time or clock in (0, 24)</td>
+</tr>
+<tr><td><a class="reference internal" href="generated/circularstats.api.radshift.html#circularstats.api.radshift" title="circularstats.api.radshift"><tt class="xref py py-obj docutils literal"><span class="pre">radshift</span></tt></a></td>
+<td>Predefined instance of <tt class="docutils literal"><span class="pre">Circular</span></tt> for radians in (0, 2pi)</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="basic-statistics">
+<h2>Basic Statistics<a class="headerlink" href="#basic-statistics" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr><td><a class="reference internal" href="generated/circularstats.api.circ_resultant.html#circularstats.api.circ_resultant" title="circularstats.api.circ_resultant"><tt class="xref py py-obj docutils literal"><span class="pre">circ_resultant</span></tt></a>(alpha[,&nbsp;w,&nbsp;d,&nbsp;axis])</td>
+<td>Compute mean resultant vector length for circular data</td>
+</tr>
+<tr><td><a class="reference internal" href="generated/circularstats.api.circ_mean.html#circularstats.api.circ_mean" title="circularstats.api.circ_mean"><tt class="xref py py-obj docutils literal"><span class="pre">circ_mean</span></tt></a>(alpha[,&nbsp;w,&nbsp;return_ci,&nbsp;xi,&nbsp;axis])</td>
+<td>Compute the mean direction for circular data.</td>
+</tr>
+<tr><td><a class="reference internal" href="generated/circularstats.api.circ_median.html#circularstats.api.circ_median" title="circularstats.api.circ_median"><tt class="xref py py-obj docutils literal"><span class="pre">circ_median</span></tt></a>(alpha[,&nbsp;axis])</td>
+<td>Compute the median direction for circular data.</td>
+</tr>
+<tr><td><a class="reference internal" href="generated/circularstats.api.circ_var.html#circularstats.api.circ_var" title="circularstats.api.circ_var"><tt class="xref py py-obj docutils literal"><span class="pre">circ_var</span></tt></a>(alpha[,&nbsp;w,&nbsp;d,&nbsp;axis])</td>
+<td>Compute circular variance for circular data  (equ.</td>
+</tr>
+<tr><td><a class="reference internal" href="generated/circularstats.api.circ_std.html#circularstats.api.circ_std" title="circularstats.api.circ_std"><tt class="xref py py-obj docutils literal"><span class="pre">circ_std</span></tt></a>(alpha[,&nbsp;w,&nbsp;d,&nbsp;axis])</td>
+<td>Compute circular standard deviation for circular data  (equ.</td>
+</tr>
+<tr><td><a class="reference internal" href="generated/circularstats.api.circ_skewness.html#circularstats.api.circ_skewness" title="circularstats.api.circ_skewness"><tt class="xref py py-obj docutils literal"><span class="pre">circ_skewness</span></tt></a>(alpha[,&nbsp;w,&nbsp;axis])</td>
+<td>Compute measures of angular skewness.</td>
+</tr>
+<tr><td><a class="reference internal" href="generated/circularstats.api.circ_kurtosis.html#circularstats.api.circ_kurtosis" title="circularstats.api.circ_kurtosis"><tt class="xref py py-obj docutils literal"><span class="pre">circ_kurtosis</span></tt></a>(alpha[,&nbsp;w,&nbsp;axis])</td>
+<td>Compute measures of angular kurtosis.</td>
+</tr>
+<tr><td><a class="reference internal" href="generated/circularstats.api.circ_moment.html#circularstats.api.circ_moment" title="circularstats.api.circ_moment"><tt class="xref py py-obj docutils literal"><span class="pre">circ_moment</span></tt></a>(alpha[,&nbsp;w,&nbsp;p,&nbsp;cent,&nbsp;axis])</td>
+<td>Compute the complex p-th centered or non-centered circular moment.</td>
+</tr>
+<tr><td><a class="reference internal" href="generated/circularstats.api.circ_kappa.html#circularstats.api.circ_kappa" title="circularstats.api.circ_kappa"><tt class="xref py py-obj docutils literal"><span class="pre">circ_kappa</span></tt></a>(alpha[,&nbsp;w,&nbsp;method])</td>
+<td>Estimate kappa of the von Mises distribution</td>
+</tr>
+<tr><td><a class="reference internal" href="generated/circularstats.api.circ_dist.html#circularstats.api.circ_dist" title="circularstats.api.circ_dist"><tt class="xref py py-obj docutils literal"><span class="pre">circ_dist</span></tt></a>(x,&nbsp;y[,&nbsp;pairwise])</td>
+<td>Compute pairwise distance, difference x_i-y_i, around the circle</td>
+</tr>
+<tr><td><a class="reference internal" href="generated/circularstats.api.circ_quantile.html#circularstats.api.circ_quantile" title="circularstats.api.circ_quantile"><tt class="xref py py-obj docutils literal"><span class="pre">circ_quantile</span></tt></a>(alpha,&nbsp;p[,&nbsp;mu])</td>
+<td>quantiles of distribution centered at mu</td>
+</tr>
+<tr><td><a class="reference internal" href="generated/circularstats.api.circ_axialmean.html#circularstats.api.circ_axialmean" title="circularstats.api.circ_axialmean"><tt class="xref py py-obj docutils literal"><span class="pre">circ_axialmean</span></tt></a>(alpha[,&nbsp;m,&nbsp;axis])</td>
+<td>Compute the mean direction for circular data with axial correction.</td>
+</tr>
+<tr><td><a class="reference internal" href="generated/circularstats.api.circ_clust.html#circularstats.api.circ_clust" title="circularstats.api.circ_clust"><tt class="xref py py-obj docutils literal"><span class="pre">circ_clust</span></tt></a>(alpha[,&nbsp;numclust,&nbsp;disp])</td>
+<td>Perform a simple agglomerative clustering of angular data.</td>
+</tr>
+<tr><td><a class="reference internal" href="generated/circularstats.api.circ_corrcc.html#circularstats.api.circ_corrcc" title="circularstats.api.circ_corrcc"><tt class="xref py py-obj docutils literal"><span class="pre">circ_corrcc</span></tt></a>(alpha1,&nbsp;alpha2)</td>
+<td>Circular correlation coefficient for two circular random variables.</td>
+</tr>
+<tr><td><a class="reference internal" href="generated/circularstats.api.circ_corrcl.html#circularstats.api.circ_corrcl" title="circularstats.api.circ_corrcl"><tt class="xref py py-obj docutils literal"><span class="pre">circ_corrcl</span></tt></a>(alpha,&nbsp;x)</td>
+<td>Correlation coefficient between one circular and one linear random variable.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="inference">
+<h2>Inference<a class="headerlink" href="#inference" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="one-sample-tests">
+<h3>One Sample Tests<a class="headerlink" href="#one-sample-tests" title="Permalink to this headline">¶</a></h3>
+<table border="1" class="docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr><td><a class="reference internal" href="generated/circularstats.api.circ_medtest.html#circularstats.api.circ_medtest" title="circularstats.api.circ_medtest"><tt class="xref py py-obj docutils literal"><span class="pre">circ_medtest</span></tt></a>(alpha,&nbsp;md)</td>
+<td>One sample test for the median angle.</td>
+</tr>
+<tr><td><a class="reference internal" href="generated/circularstats.api.circ_mtest.html#circularstats.api.circ_mtest" title="circularstats.api.circ_mtest"><tt class="xref py py-obj docutils literal"><span class="pre">circ_mtest</span></tt></a>(alpha,&nbsp;mu0[,&nbsp;xi,&nbsp;w,&nbsp;d])</td>
+<td>One sample test for the mean angle.</td>
+</tr>
+<tr><td><a class="reference internal" href="generated/circularstats.api.circ_symtest.html#circularstats.api.circ_symtest" title="circularstats.api.circ_symtest"><tt class="xref py py-obj docutils literal"><span class="pre">circ_symtest</span></tt></a>(alpha)</td>
+<td>Test for symmetry about the median.</td>
+</tr>
+<tr><td><a class="reference internal" href="generated/circularstats.api.circ_otest.html#circularstats.api.circ_otest" title="circularstats.api.circ_otest"><tt class="xref py py-obj docutils literal"><span class="pre">circ_otest</span></tt></a>(alpha[,&nbsp;sz,&nbsp;w])</td>
+<td>Omnibus or Hodges-Ajne test for uniform distribution of circular data.</td>
+</tr>
+<tr><td><a class="reference internal" href="generated/circularstats.api.circ_raotest.html#circularstats.api.circ_raotest" title="circularstats.api.circ_raotest"><tt class="xref py py-obj docutils literal"><span class="pre">circ_raotest</span></tt></a>(alpha)</td>
+<td>Rao&#8217;s spacing test for uniform distribution of circular data.</td>
+</tr>
+<tr><td><a class="reference internal" href="generated/circularstats.api.circ_rtest.html#circularstats.api.circ_rtest" title="circularstats.api.circ_rtest"><tt class="xref py py-obj docutils literal"><span class="pre">circ_rtest</span></tt></a>(alpha[,&nbsp;w,&nbsp;d,&nbsp;approx])</td>
+<td>Rayleigh test for uniform distribution of circular data.</td>
+</tr>
+<tr><td><a class="reference internal" href="generated/circularstats.api.circ_vtest.html#circularstats.api.circ_vtest" title="circularstats.api.circ_vtest"><tt class="xref py py-obj docutils literal"><span class="pre">circ_vtest</span></tt></a>(alpha,&nbsp;mu0[,&nbsp;w,&nbsp;d])</td>
+<td>V test for uniformity of circular data with a specified mean alternative.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="two-and-multi-sample-tests">
+<h3>Two and Multi Sample Tests<a class="headerlink" href="#two-and-multi-sample-tests" title="Permalink to this headline">¶</a></h3>
+<table border="1" class="docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr><td><a class="reference internal" href="generated/circularstats.api.circ_cmtest.html#circularstats.api.circ_cmtest" title="circularstats.api.circ_cmtest"><tt class="xref py py-obj docutils literal"><span class="pre">circ_cmtest</span></tt></a>(alpha,&nbsp;groups)</td>
+<td>Nonparametric multi-sample test for equal medians.</td>
+</tr>
+<tr><td><a class="reference internal" href="generated/circularstats.api.circ_hktest.html#circularstats.api.circ_hktest" title="circularstats.api.circ_hktest"><tt class="xref py py-obj docutils literal"><span class="pre">circ_hktest</span></tt></a>(alpha,&nbsp;idp,&nbsp;idq[,&nbsp;inter,&nbsp;fn])</td>
+<td>Parametric two-way ANOVA for circular data with interations.</td>
+</tr>
+<tr><td><a class="reference internal" href="generated/circularstats.api.circ_ktest.html#circularstats.api.circ_ktest" title="circularstats.api.circ_ktest"><tt class="xref py py-obj docutils literal"><span class="pre">circ_ktest</span></tt></a>(alpha1,&nbsp;alpha2)</td>
+<td>A parametric two-sample test for equality of two concentration parameters.</td>
+</tr>
+<tr><td><a class="reference internal" href="generated/circularstats.api.circ_wwtest.html#circularstats.api.circ_wwtest" title="circularstats.api.circ_wwtest"><tt class="xref py py-obj docutils literal"><span class="pre">circ_wwtest</span></tt></a>(alpha,&nbsp;groups[,&nbsp;w])</td>
+<td>Parametric Watson-Williams multi-sample test for equal means.</td>
+</tr>
+<tr><td><a class="reference internal" href="generated/circularstats.api.circ_kuipertest.html#circularstats.api.circ_kuipertest" title="circularstats.api.circ_kuipertest"><tt class="xref py py-obj docutils literal"><span class="pre">circ_kuipertest</span></tt></a>(alpha1,&nbsp;alpha2[,&nbsp;res,&nbsp;vis_on])</td>
+<td>Kuiper two-sample test for equality of distributions</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="section" id="distributions">
+<h2>Distributions<a class="headerlink" href="#distributions" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr><td><a class="reference internal" href="generated/circularstats.distributions.pdf_from_data.html#circularstats.distributions.pdf_from_data" title="circularstats.distributions.pdf_from_data"><tt class="xref py py-obj docutils literal"><span class="pre">pdf_from_data</span></tt></a>(data[,&nbsp;k_comp])</td>
+<td>get a pdf function for trigonometric series density</td>
+</tr>
+<tr><td><a class="reference internal" href="generated/circularstats.distributions.circ_pdf_from_moments.html#circularstats.distributions.circ_pdf_from_moments" title="circularstats.distributions.circ_pdf_from_moments"><tt class="xref py py-obj docutils literal"><span class="pre">circ_pdf_from_moments</span></tt></a>(x,&nbsp;coeff_cos[,&nbsp;coeff_sin])</td>
+<td>pdf evaluated at x for circular distribution given by moments</td>
+</tr>
+<tr><td><a class="reference internal" href="generated/circularstats.distributions.circ_cdf_from_moments.html#circularstats.distributions.circ_cdf_from_moments" title="circularstats.distributions.circ_cdf_from_moments"><tt class="xref py py-obj docutils literal"><span class="pre">circ_cdf_from_moments</span></tt></a>(x,&nbsp;coeff_cos[,&nbsp;coeff_sin])</td>
+<td>cdf evaluated at x for circular distribution given by moments</td>
+</tr>
+<tr><td><a class="reference internal" href="generated/circularstats.distributions.circ_moments_emp.html#circularstats.distributions.circ_moments_emp" title="circularstats.distributions.circ_moments_emp"><tt class="xref py py-obj docutils literal"><span class="pre">circ_moments_emp</span></tt></a>(x[,&nbsp;orders])</td>
+<td>calculate circular moments for the data</td>
+</tr>
+<tr><td><a class="reference internal" href="generated/circularstats.distributions.circ_moments_from_pdf.html#circularstats.distributions.circ_moments_from_pdf" title="circularstats.distributions.circ_moments_from_pdf"><tt class="xref py py-obj docutils literal"><span class="pre">circ_moments_from_pdf</span></tt></a>(pdf_func[,&nbsp;k_comp,&nbsp;...])</td>
+<td>calculate circular moments for a distribution given by its density</td>
+</tr>
+<tr><td><a class="reference internal" href="generated/circularstats.distributions.pdf_wrapcauchy.html#circularstats.distributions.pdf_wrapcauchy" title="circularstats.distributions.pdf_wrapcauchy"><tt class="xref py py-obj docutils literal"><span class="pre">pdf_wrapcauchy</span></tt></a>(x,&nbsp;mean,&nbsp;a[,&nbsp;k_comp,&nbsp;neg])</td>
+<td>pdf of wrapped cauchy distribution</td>
+</tr>
+<tr><td><a class="reference internal" href="generated/circularstats.distributions.cdf_wrapcauchy.html#circularstats.distributions.cdf_wrapcauchy" title="circularstats.distributions.cdf_wrapcauchy"><tt class="xref py py-obj docutils literal"><span class="pre">cdf_wrapcauchy</span></tt></a>(x,&nbsp;mean,&nbsp;a[,&nbsp;k_comp])</td>
+<td>cdf of wrapped cauchy distribution</td>
+</tr>
+<tr><td><a class="reference internal" href="generated/circularstats.distributions.coeffs_wrapcauchy.html#circularstats.distributions.coeffs_wrapcauchy" title="circularstats.distributions.coeffs_wrapcauchy"><tt class="xref py py-obj docutils literal"><span class="pre">coeffs_wrapcauchy</span></tt></a>(a,&nbsp;mu[,&nbsp;k_comp,&nbsp;neg])</td>
+<td>coefficients for series expansion of wrapped cauchy distribution</td>
+</tr>
+<tr><td><a class="reference internal" href="generated/circularstats.distributions.pdf_wrapnormal.html#circularstats.distributions.pdf_wrapnormal" title="circularstats.distributions.pdf_wrapnormal"><tt class="xref py py-obj docutils literal"><span class="pre">pdf_wrapnormal</span></tt></a>(x,&nbsp;mean,&nbsp;var[,&nbsp;k_comp])</td>
+<td>pdf of wrapped cauchy distribution</td>
+</tr>
+<tr><td><a class="reference internal" href="generated/circularstats.distributions.pdf_wrapstable.html#circularstats.distributions.pdf_wrapstable" title="circularstats.distributions.pdf_wrapstable"><tt class="xref py py-obj docutils literal"><span class="pre">pdf_wrapstable</span></tt></a>(x,&nbsp;a,&nbsp;b,&nbsp;mu[,&nbsp;k_comp])</td>
+<td>density of wrapped stable distribution</td>
+</tr>
+<tr><td><a class="reference internal" href="generated/circularstats.distributions.coeffs_wrapnormal.html#circularstats.distributions.coeffs_wrapnormal" title="circularstats.distributions.coeffs_wrapnormal"><tt class="xref py py-obj docutils literal"><span class="pre">coeffs_wrapnormal</span></tt></a>(mean,&nbsp;var[,&nbsp;k_comp])</td>
+<td>coefficients for series expansion of wrapped normal distribution</td>
+</tr>
+<tr><td><a class="reference internal" href="generated/circularstats.distributions.chf_cauchy.html#circularstats.distributions.chf_cauchy" title="circularstats.distributions.chf_cauchy"><tt class="xref py py-obj docutils literal"><span class="pre">chf_cauchy</span></tt></a>(t,&nbsp;a,&nbsp;mu)</td>
+<td>characteristic function of cauchy distribution</td>
+</tr>
+<tr><td><a class="reference internal" href="generated/circularstats.distributions.chf_normal.html#circularstats.distributions.chf_normal" title="circularstats.distributions.chf_normal"><tt class="xref py py-obj docutils literal"><span class="pre">chf_normal</span></tt></a>(t,&nbsp;mean,&nbsp;var)</td>
+<td>characteristic function of normal distribution</td>
+</tr>
+<tr><td><a class="reference internal" href="generated/circularstats.distributions.chf_stable.html#circularstats.distributions.chf_stable" title="circularstats.distributions.chf_stable"><tt class="xref py py-obj docutils literal"><span class="pre">chf_stable</span></tt></a>(t,&nbsp;a,&nbsp;lambd,&nbsp;gamma,&nbsp;mu)</td>
+<td>characteristic function of stable distribution</td>
+</tr>
+<tr><td><a class="reference internal" href="generated/circularstats.distributions.pdf_wrapped_from_charfunc.html#circularstats.distributions.pdf_wrapped_from_charfunc" title="circularstats.distributions.pdf_wrapped_from_charfunc"><tt class="xref py py-obj docutils literal"><span class="pre">pdf_wrapped_from_charfunc</span></tt></a>(chfunc[,&nbsp;args,&nbsp;k_comp])</td>
+<td>returns a function that is the density of a wrapped distribution</td>
+</tr>
+<tr><td><a class="reference internal" href="generated/circularstats.distributions.cdf_wrapped_from_charfunc.html#circularstats.distributions.cdf_wrapped_from_charfunc" title="circularstats.distributions.cdf_wrapped_from_charfunc"><tt class="xref py py-obj docutils literal"><span class="pre">cdf_wrapped_from_charfunc</span></tt></a>(chfunc[,&nbsp;args,&nbsp;k_comp])</td>
+<td>returns a function that is the cumulative density of a wrapped distribution</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Circular Statistics</a><ul>
+<li><a class="reference internal" href="#introduction">Introduction</a></li>
+<li><a class="reference internal" href="#circular-data-description">Circular Data Description</a><ul>
+</ul>
+</li>
+<li><a class="reference internal" href="#basic-statistics">Basic Statistics</a><ul>
+</ul>
+</li>
+<li><a class="reference internal" href="#inference">Inference</a><ul>
+<li><a class="reference internal" href="#one-sample-tests">One Sample Tests</a><ul>
+</ul>
+</li>
+<li><a class="reference internal" href="#two-and-multi-sample-tests">Two and Multi Sample Tests</a><ul>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#distributions">Distributions</a><ul>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="index.html"
+                        title="previous chapter">Welcome to circularstats&#8217;s documentation!</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="generated/circularstats.api.Circular.html"
+                        title="next chapter">circularstats.api.Circular</a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="_sources/circular.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" size="18" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="generated/circularstats.api.Circular.html" title="circularstats.api.Circular"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="index.html" title="Welcome to circularstats’s documentation!"
+             >previous</a> |</li>
+        <li><a href="index.html">circularstats v0.1 documentation</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2012, Josef Perktold.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.0.7.
+    </div>
+  </body>
+</html>
