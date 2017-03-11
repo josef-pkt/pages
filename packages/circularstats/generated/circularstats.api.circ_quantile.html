@@ -1,0 +1,125 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>circularstats.api.circ_quantile &mdash; circularstats v0.1 documentation</title>
+    <link rel="stylesheet" href="../_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <link rel="top" title="circularstats v0.1 documentation" href="../index.html" />
+    <link rel="up" title="Circular Statistics" href="../circular.html" />
+    <link rel="next" title="circularstats.api.circ_axialmean" href="circularstats.api.circ_axialmean.html" />
+    <link rel="prev" title="circularstats.api.circ_dist" href="circularstats.api.circ_dist.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="circularstats.api.circ_axialmean.html" title="circularstats.api.circ_axialmean"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="circularstats.api.circ_dist.html" title="circularstats.api.circ_dist"
+             accesskey="P">previous</a> |</li>
+        <li><a href="../index.html">circularstats v0.1 documentation</a> &raquo;</li>
+          <li><a href="../circular.html" accesskey="U">Circular Statistics</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="circularstats-api-circ-quantile">
+<h1>circularstats.api.circ_quantile<a class="headerlink" href="#circularstats-api-circ-quantile" title="Permalink to this headline">¶</a></h1>
+<dl class="staticmethod">
+<dt id="circularstats.api.circ_quantile">
+<em class="property">static </em><tt class="descclassname">api.</tt><tt class="descname">circ_quantile</tt><big>(</big><em>alpha</em>, <em>p</em>, <em>mu=None</em><big>)</big><a class="headerlink" href="#circularstats.api.circ_quantile" title="Permalink to this definition">¶</a></dt>
+<dd><p>quantiles of distribution centered at mu</p>
+<p>Note I made this up in analogy and similar to bootstrap on a circle. I
+still need to look up an &#8220;official&#8221; definition.</p>
+<p>open: for very asymmetric, skewed distributions this will go the shorter
+distance, in the bootstrap description the split is by count.
+BUG: this shouldn&#8217;t work with support around the entire circle and p
+close to one or zero.</p>
+<p>might not work correctly for 2-Dim arrays</p>
+</dd></dl>
+
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="circularstats.api.circ_dist.html"
+                        title="previous chapter">circularstats.api.circ_dist</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="circularstats.api.circ_axialmean.html"
+                        title="next chapter">circularstats.api.circ_axialmean</a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="../_sources/generated/circularstats.api.circ_quantile.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" size="18" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="circularstats.api.circ_axialmean.html" title="circularstats.api.circ_axialmean"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="circularstats.api.circ_dist.html" title="circularstats.api.circ_dist"
+             >previous</a> |</li>
+        <li><a href="../index.html">circularstats v0.1 documentation</a> &raquo;</li>
+          <li><a href="../circular.html" >Circular Statistics</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2012, Josef Perktold.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.0.7.
+    </div>
+  </body>
+</html>

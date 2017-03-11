@@ -1,0 +1,162 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>circularstats.api.circ_wwtest &mdash; circularstats v0.1 documentation</title>
+    <link rel="stylesheet" href="../_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <link rel="top" title="circularstats v0.1 documentation" href="../index.html" />
+    <link rel="up" title="Circular Statistics" href="../circular.html" />
+    <link rel="next" title="circularstats.api.circ_kuipertest" href="circularstats.api.circ_kuipertest.html" />
+    <link rel="prev" title="circularstats.api.circ_ktest" href="circularstats.api.circ_ktest.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="circularstats.api.circ_kuipertest.html" title="circularstats.api.circ_kuipertest"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="circularstats.api.circ_ktest.html" title="circularstats.api.circ_ktest"
+             accesskey="P">previous</a> |</li>
+        <li><a href="../index.html">circularstats v0.1 documentation</a> &raquo;</li>
+          <li><a href="../circular.html" accesskey="U">Circular Statistics</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="circularstats-api-circ-wwtest">
+<h1>circularstats.api.circ_wwtest<a class="headerlink" href="#circularstats-api-circ-wwtest" title="Permalink to this headline">¶</a></h1>
+<dl class="staticmethod">
+<dt id="circularstats.api.circ_wwtest">
+<em class="property">static </em><tt class="descclassname">api.</tt><tt class="descname">circ_wwtest</tt><big>(</big><em>alpha</em>, <em>groups</em>, <em>w=1</em><big>)</big><a class="headerlink" href="#circularstats.api.circ_wwtest" title="Permalink to this definition">¶</a></dt>
+<dd><p>Parametric Watson-Williams multi-sample test for equal means.</p>
+<p>Can be used as a one-way ANOVA test for circular data.</p>
+<div class="highlight-python"><pre>H0: all populations have equal means
+HA: at least one populations has different mean</pre>
+</div>
+<p>Note:
+Use with binned data is only advisable if binning is finer than 10 deg.
+In this case, alpha is assumed to correspond to bin centers.</p>
+<p>The Watson-Williams two-sample test assumes underlying von-Mises
+distributrions. All groups are assumed to have a common concentration
+parameter k.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">Parameters :</th><td class="field-body"><p class="first"><strong>alpha</strong> : array_like</p>
+<blockquote>
+<div><p>data, sample of angles in radians</p>
+</div></blockquote>
+<p><strong>idx</strong> : array_like</p>
+<blockquote>
+<div><p>indicates which population the respective angle in alpha comes from.</p>
+</div></blockquote>
+<p><strong>w</strong> : float or ndarray</p>
+<blockquote>
+<div><p>case weight, number of observations in case of binned angle data</p>
+</div></blockquote>
+</td>
+</tr>
+<tr class="field"><th class="field-name">Returns :</th><td class="field-body"><p class="first"><strong>pval</strong> : float</p>
+<blockquote>
+<div><p>p-value of the Watson-Williams multi-sample test. Reject H0 if p-value
+is small.</p>
+</div></blockquote>
+<p><strong>table</strong> : pandas.DataFrame instance</p>
+<blockquote class="last">
+<div><p>data frame containg the ANOVA table</p>
+</div></blockquote>
+</td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">References</p>
+<p>Biostatistical Analysis, J. H. Zar</p>
+<p>Philipp Berens, 2009, Circular Statistics Toolbox for Matlab</p>
+</dd></dl>
+
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="circularstats.api.circ_ktest.html"
+                        title="previous chapter">circularstats.api.circ_ktest</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="circularstats.api.circ_kuipertest.html"
+                        title="next chapter">circularstats.api.circ_kuipertest</a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="../_sources/generated/circularstats.api.circ_wwtest.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" size="18" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="circularstats.api.circ_kuipertest.html" title="circularstats.api.circ_kuipertest"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="circularstats.api.circ_ktest.html" title="circularstats.api.circ_ktest"
+             >previous</a> |</li>
+        <li><a href="../index.html">circularstats v0.1 documentation</a> &raquo;</li>
+          <li><a href="../circular.html" >Circular Statistics</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2012, Josef Perktold.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.0.7.
+    </div>
+  </body>
+</html>

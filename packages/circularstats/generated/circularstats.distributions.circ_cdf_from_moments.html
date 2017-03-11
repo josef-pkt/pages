@@ -1,0 +1,145 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>circularstats.distributions.circ_cdf_from_moments &mdash; circularstats v0.1 documentation</title>
+    <link rel="stylesheet" href="../_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <link rel="top" title="circularstats v0.1 documentation" href="../index.html" />
+    <link rel="up" title="Circular Statistics" href="../circular.html" />
+    <link rel="next" title="circularstats.distributions.circ_moments_emp" href="circularstats.distributions.circ_moments_emp.html" />
+    <link rel="prev" title="circularstats.distributions.circ_pdf_from_moments" href="circularstats.distributions.circ_pdf_from_moments.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="circularstats.distributions.circ_moments_emp.html" title="circularstats.distributions.circ_moments_emp"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="circularstats.distributions.circ_pdf_from_moments.html" title="circularstats.distributions.circ_pdf_from_moments"
+             accesskey="P">previous</a> |</li>
+        <li><a href="../index.html">circularstats v0.1 documentation</a> &raquo;</li>
+          <li><a href="../circular.html" accesskey="U">Circular Statistics</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="circularstats-distributions-circ-cdf-from-moments">
+<h1>circularstats.distributions.circ_cdf_from_moments<a class="headerlink" href="#circularstats-distributions-circ-cdf-from-moments" title="Permalink to this headline">¶</a></h1>
+<dl class="staticmethod">
+<dt id="circularstats.distributions.circ_cdf_from_moments">
+<em class="property">static </em><tt class="descclassname">distributions.</tt><tt class="descname">circ_cdf_from_moments</tt><big>(</big><em>x</em>, <em>coeff_cos</em>, <em>coeff_sin=None</em><big>)</big><a class="headerlink" href="#circularstats.distributions.circ_cdf_from_moments" title="Permalink to this definition">¶</a></dt>
+<dd><p>cdf evaluated at x for circular distribution given by moments</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">Parameters :</th><td class="field-body"><p class="first"><strong>x</strong> : array_like</p>
+<blockquote>
+<div><p>points at which pdf is evaluated</p>
+</div></blockquote>
+<p><strong>coeff_cos</strong> : iterable</p>
+<blockquote>
+<div><p>circular moments, cosine part</p>
+</div></blockquote>
+<p><strong>coeff_cos</strong> : None or iterable</p>
+<blockquote>
+<div><p>circular moments, sine part
+If the distribution is symmetric, then this is zero and it is skipped.</p>
+</div></blockquote>
+</td>
+</tr>
+<tr class="field"><th class="field-name">Returns :</th><td class="field-body"><p class="first"><strong>cdf</strong> : ndarray</p>
+<blockquote class="last">
+<div><p>cumulative density evaluated at x</p>
+</div></blockquote>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="circularstats.distributions.circ_pdf_from_moments.html"
+                        title="previous chapter">circularstats.distributions.circ_pdf_from_moments</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="circularstats.distributions.circ_moments_emp.html"
+                        title="next chapter">circularstats.distributions.circ_moments_emp</a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="../_sources/generated/circularstats.distributions.circ_cdf_from_moments.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" size="18" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="circularstats.distributions.circ_moments_emp.html" title="circularstats.distributions.circ_moments_emp"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="circularstats.distributions.circ_pdf_from_moments.html" title="circularstats.distributions.circ_pdf_from_moments"
+             >previous</a> |</li>
+        <li><a href="../index.html">circularstats v0.1 documentation</a> &raquo;</li>
+          <li><a href="../circular.html" >Circular Statistics</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2012, Josef Perktold.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.0.7.
+    </div>
+  </body>
+</html>

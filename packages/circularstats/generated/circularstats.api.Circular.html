@@ -1,0 +1,197 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>circularstats.api.Circular &mdash; circularstats v0.1 documentation</title>
+    <link rel="stylesheet" href="../_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <link rel="top" title="circularstats v0.1 documentation" href="../index.html" />
+    <link rel="up" title="Circular Statistics" href="../circular.html" />
+    <link rel="next" title="circularstats.api.Circular.circ_kappa" href="circularstats.api.Circular.circ_kappa.html" />
+    <link rel="prev" title="circularstats.distributions.cdf_wrapped_from_charfunc" href="circularstats.distributions.cdf_wrapped_from_charfunc.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="circularstats.api.Circular.circ_kappa.html" title="circularstats.api.Circular.circ_kappa"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="circularstats.distributions.cdf_wrapped_from_charfunc.html" title="circularstats.distributions.cdf_wrapped_from_charfunc"
+             accesskey="P">previous</a> |</li>
+        <li><a href="../index.html">circularstats v0.1 documentation</a> &raquo;</li>
+          <li><a href="../circular.html" accesskey="U">Circular Statistics</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="circularstats-api-circular">
+<h1>circularstats.api.Circular<a class="headerlink" href="#circularstats-api-circular" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="circularstats.api.Circular">
+<em class="property">class </em><tt class="descclassname">circularstats.api.</tt><tt class="descname">Circular</tt><big>(</big><em>low=-3.1415926535897931</em>, <em>upp=3.1415926535897931</em>, <em>units='radians'</em>, <em>modulo=True</em>, <em>rad_low=-3.1415926535897931</em>, <em>rad_upp=3.1415926535897931</em>, <em>style='angle'</em><big>)</big><a class="headerlink" href="#circularstats.api.Circular" title="Permalink to this definition">¶</a></dt>
+<dd><p>Class to keep track of circular data</p>
+<p>mainly transformation to radians</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">Parameters :</th><td class="field-body"><p class="first"><strong>low, upp</strong> : float</p>
+<blockquote>
+<div><p>bounds of interval, used for modulo and integration.
+defines also the units of the data</p>
+</div></blockquote>
+<p><strong>units</strong> : {radians or any other string}</p>
+<blockquote>
+<div><p>If radians, then the data is already assumed to be in radians.
+TODO: looks either redundant or not used enough, see Notes</p>
+</div></blockquote>
+<p><strong>modulo</strong> : bool</p>
+<blockquote>
+<div><p>If True (default), then conversion of units includes taking modulo,
+it maps data into the defined interval</p>
+</div></blockquote>
+<p><strong>rad_low, rad_upp</strong> : float</p>
+<blockquote>
+<div><p>Interval used for radians, common are either (-pi, pi) or (0, 2*pi)</p>
+</div></blockquote>
+<p><strong>style</strong> : string or tuple</p>
+<blockquote class="last">
+<div><p>style options for polar plots. If it is a tuple of two floats, then
+those are interpreted as offset and direction. Direction is -1 for
+clockwise and 1 for counter-clockwise. Strings can be used for common
+styles, &#8216;angle&#8217; = (0, 1), &#8216;clock&#8217; = (pi/2, -1), &#8216;geographic&#8217;=(pi/2, 1)</p>
+</div></blockquote>
+</td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Notes</p>
+<p>radians to radians conversion is used to shift the origin for modulo and
+integration, e.g. cdf of a circular distribution. This is not fully
+implemented yet.</p>
+<p>The style option, offset and orientation, are used only for plotting,
+they are not used to define the origin and orientation of the
+transformations. The orientation is always assumed to be counter clockwise
+including in the transformations.</p>
+<p class="rubric">Methods</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr><td><a class="reference internal" href="circularstats.api.Circular.circ_kappa.html#circularstats.api.Circular.circ_kappa" title="circularstats.api.Circular.circ_kappa"><tt class="xref py py-obj docutils literal"><span class="pre">circ_kappa</span></tt></a>(x[,&nbsp;weights])</td>
+<td>estimated kappa with conversion of x</td>
+</tr>
+<tr><td><a class="reference internal" href="circularstats.api.Circular.circ_mean.html#circularstats.api.Circular.circ_mean" title="circularstats.api.Circular.circ_mean"><tt class="xref py py-obj docutils literal"><span class="pre">circ_mean</span></tt></a>(x[,&nbsp;return_ci,&nbsp;xi,&nbsp;axis])</td>
+<td>circular mean with conversion of input and output</td>
+</tr>
+<tr><td><a class="reference internal" href="circularstats.api.Circular.circ_std.html#circularstats.api.Circular.circ_std" title="circularstats.api.Circular.circ_std"><tt class="xref py py-obj docutils literal"><span class="pre">circ_std</span></tt></a>(x[,&nbsp;weights,&nbsp;stepsize,&nbsp;axis])</td>
+<td>circular standard deviation with conversion of input and output</td>
+</tr>
+<tr><td><a class="reference internal" href="circularstats.api.Circular.from_radians.html#circularstats.api.Circular.from_radians" title="circularstats.api.Circular.from_radians"><tt class="xref py py-obj docutils literal"><span class="pre">from_radians</span></tt></a>(rads)</td>
+<td>Convert angles from radians to user units</td>
+</tr>
+<tr><td><a class="reference internal" href="circularstats.api.Circular.integrate.html#circularstats.api.Circular.integrate" title="circularstats.api.Circular.integrate"><tt class="xref py py-obj docutils literal"><span class="pre">integrate</span></tt></a>(func[,&nbsp;low,&nbsp;upp])</td>
+<td>integrate function</td>
+</tr>
+<tr><td><a class="reference internal" href="circularstats.api.Circular.modshift_loc.html#circularstats.api.Circular.modshift_loc" title="circularstats.api.Circular.modshift_loc"><tt class="xref py py-obj docutils literal"><span class="pre">modshift_loc</span></tt></a>(x)</td>
+<td>shift and modulo in user units</td>
+</tr>
+<tr><td><a class="reference internal" href="circularstats.api.Circular.modshift_rad_loc.html#circularstats.api.Circular.modshift_rad_loc" title="circularstats.api.Circular.modshift_rad_loc"><tt class="xref py py-obj docutils literal"><span class="pre">modshift_rad_loc</span></tt></a>(rads)</td>
+<td>shift and modulo in internal radians</td>
+</tr>
+<tr><td><a class="reference internal" href="circularstats.api.Circular.to_radians.html#circularstats.api.Circular.to_radians" title="circularstats.api.Circular.to_radians"><tt class="xref py py-obj docutils literal"><span class="pre">to_radians</span></tt></a>(x)</td>
+<td>Convert user units to angles in radians</td>
+</tr>
+<tr><td><a class="reference internal" href="circularstats.api.Circular.wrap.html#circularstats.api.Circular.wrap" title="circularstats.api.Circular.wrap"><tt class="xref py py-obj docutils literal"><span class="pre">wrap</span></tt></a>(func,&nbsp;x,&nbsp;*func_args,&nbsp;**func_kwds)</td>
+<td>call function func for radians with conversion</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="circularstats.distributions.cdf_wrapped_from_charfunc.html"
+                        title="previous chapter">circularstats.distributions.cdf_wrapped_from_charfunc</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="circularstats.api.Circular.circ_kappa.html"
+                        title="next chapter">circularstats.api.Circular.circ_kappa</a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="../_sources/generated/circularstats.api.Circular.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" size="18" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="circularstats.api.Circular.circ_kappa.html" title="circularstats.api.Circular.circ_kappa"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="circularstats.distributions.cdf_wrapped_from_charfunc.html" title="circularstats.distributions.cdf_wrapped_from_charfunc"
+             >previous</a> |</li>
+        <li><a href="../index.html">circularstats v0.1 documentation</a> &raquo;</li>
+          <li><a href="../circular.html" >Circular Statistics</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2012, Josef Perktold.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.0.7.
+    </div>
+  </body>
+</html>

@@ -1,0 +1,153 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>circularstats.distributions.chf_stable &mdash; circularstats v0.1 documentation</title>
+    <link rel="stylesheet" href="../_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <link rel="top" title="circularstats v0.1 documentation" href="../index.html" />
+    <link rel="up" title="Circular Statistics" href="../circular.html" />
+    <link rel="next" title="circularstats.distributions.pdf_wrapped_from_charfunc" href="circularstats.distributions.pdf_wrapped_from_charfunc.html" />
+    <link rel="prev" title="circularstats.distributions.chf_normal" href="circularstats.distributions.chf_normal.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="circularstats.distributions.pdf_wrapped_from_charfunc.html" title="circularstats.distributions.pdf_wrapped_from_charfunc"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="circularstats.distributions.chf_normal.html" title="circularstats.distributions.chf_normal"
+             accesskey="P">previous</a> |</li>
+        <li><a href="../index.html">circularstats v0.1 documentation</a> &raquo;</li>
+          <li><a href="../circular.html" accesskey="U">Circular Statistics</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="circularstats-distributions-chf-stable">
+<h1>circularstats.distributions.chf_stable<a class="headerlink" href="#circularstats-distributions-chf-stable" title="Permalink to this headline">¶</a></h1>
+<dl class="staticmethod">
+<dt id="circularstats.distributions.chf_stable">
+<em class="property">static </em><tt class="descclassname">distributions.</tt><tt class="descname">chf_stable</tt><big>(</big><em>t</em>, <em>a</em>, <em>lambd</em>, <em>gamma</em>, <em>mu</em><big>)</big><a class="headerlink" href="#circularstats.distributions.chf_stable" title="Permalink to this definition">¶</a></dt>
+<dd><p>characteristic function of stable distribution</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">Parameters :</th><td class="field-body"><p class="first"><strong>t</strong> : array_like</p>
+<blockquote>
+<div><p>points at which characteristic function is evaluated</p>
+</div></blockquote>
+<p><strong>a, lambd, gamma</strong> : float (or array_like ?)</p>
+<blockquote>
+<div><p>parameters of stable distribution, see Notes for examples - TODO</p>
+</div></blockquote>
+<p><strong>mu</strong> : float (or array_like ?)</p>
+<blockquote>
+<div><p>mean or location parameter of underlying stable distribution</p>
+</div></blockquote>
+</td>
+</tr>
+<tr class="field"><th class="field-name">Returns :</th><td class="field-body"><p class="first"><strong>chfval</strong> : ndarray</p>
+<blockquote class="last">
+<div><p>characteristic function evaluated at x</p>
+</div></blockquote>
+</td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Notes</p>
+<p>Can be used for higher dimensional arguments if <tt class="docutils literal"><span class="pre">t</span></tt>, <tt class="docutils literal"><span class="pre">mu</span></tt> and <tt class="docutils literal"><span class="pre">a</span></tt>
+broadcast.</p>
+<p>Cauchy and Normal distributions are special cases of the stable
+distribution, with parameters</p>
+<div class="highlight-python"><pre>normal :
+cauchy :</pre>
+</div>
+<p>tested for the two special cases.</p>
+</dd></dl>
+
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="circularstats.distributions.chf_normal.html"
+                        title="previous chapter">circularstats.distributions.chf_normal</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="circularstats.distributions.pdf_wrapped_from_charfunc.html"
+                        title="next chapter">circularstats.distributions.pdf_wrapped_from_charfunc</a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="../_sources/generated/circularstats.distributions.chf_stable.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" size="18" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="circularstats.distributions.pdf_wrapped_from_charfunc.html" title="circularstats.distributions.pdf_wrapped_from_charfunc"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="circularstats.distributions.chf_normal.html" title="circularstats.distributions.chf_normal"
+             >previous</a> |</li>
+        <li><a href="../index.html">circularstats v0.1 documentation</a> &raquo;</li>
+          <li><a href="../circular.html" >Circular Statistics</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2012, Josef Perktold.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.0.7.
+    </div>
+  </body>
+</html>

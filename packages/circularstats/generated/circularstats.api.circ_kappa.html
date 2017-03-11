@@ -1,0 +1,154 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>circularstats.api.circ_kappa &mdash; circularstats v0.1 documentation</title>
+    <link rel="stylesheet" href="../_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <link rel="top" title="circularstats v0.1 documentation" href="../index.html" />
+    <link rel="up" title="Circular Statistics" href="../circular.html" />
+    <link rel="next" title="circularstats.api.circ_dist" href="circularstats.api.circ_dist.html" />
+    <link rel="prev" title="circularstats.api.circ_moment" href="circularstats.api.circ_moment.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="circularstats.api.circ_dist.html" title="circularstats.api.circ_dist"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="circularstats.api.circ_moment.html" title="circularstats.api.circ_moment"
+             accesskey="P">previous</a> |</li>
+        <li><a href="../index.html">circularstats v0.1 documentation</a> &raquo;</li>
+          <li><a href="../circular.html" accesskey="U">Circular Statistics</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="circularstats-api-circ-kappa">
+<h1>circularstats.api.circ_kappa<a class="headerlink" href="#circularstats-api-circ-kappa" title="Permalink to this headline">¶</a></h1>
+<dl class="staticmethod">
+<dt id="circularstats.api.circ_kappa">
+<em class="property">static </em><tt class="descclassname">api.</tt><tt class="descname">circ_kappa</tt><big>(</big><em>alpha</em>, <em>w=1</em>, <em>method='approx'</em><big>)</big><a class="headerlink" href="#circularstats.api.circ_kappa" title="Permalink to this definition">¶</a></dt>
+<dd><p>Estimate kappa of the von Mises distribution</p>
+<p>Computes an approximation to the ML estimate of the concentration
+parameter kappa of the von Mises distribution.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">Parameters :</th><td class="field-body"><p class="first"><strong>alpha</strong> : array_like</p>
+<blockquote>
+<div><p>angles in radians OR alpha is length resultant</p>
+</div></blockquote>
+<p><strong>w</strong> : float or array_like</p>
+<blockquote>
+<div><p>number of incidences in case of binned angle data</p>
+</div></blockquote>
+<p><strong>method</strong> : string in [&#8216;approx&#8217;, &#8216;mle&#8217;, &#8216;ub&#8217;]</p>
+<blockquote>
+<div><p>If method is &#8220;approx&#8221; (default), then an approximation is used that
+does not require a nonlinear fixed point search.
+&#8216;mle&#8217; calculates the biased maximum likelihood estimate
+&#8216;ub&#8217; calculates kappa based on unbiased root
+TODO: mle, ub not verified yet</p>
+</div></blockquote>
+</td>
+</tr>
+<tr class="field"><th class="field-name">Returns :</th><td class="field-body"><p class="first"><strong>kappa</strong> : float</p>
+<blockquote class="last">
+<div><p>estimated value of kappa</p>
+</div></blockquote>
+</td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">References</p>
+<p>Statistical analysis of circular data, Fisher, equation p. 88</p>
+<p>Wikipedia</p>
+<p>Philipp Berens, 2009, Circular Statistics Toolbox for Matlab</p>
+</dd></dl>
+
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="circularstats.api.circ_moment.html"
+                        title="previous chapter">circularstats.api.circ_moment</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="circularstats.api.circ_dist.html"
+                        title="next chapter">circularstats.api.circ_dist</a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="../_sources/generated/circularstats.api.circ_kappa.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" size="18" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="circularstats.api.circ_dist.html" title="circularstats.api.circ_dist"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="circularstats.api.circ_moment.html" title="circularstats.api.circ_moment"
+             >previous</a> |</li>
+        <li><a href="../index.html">circularstats v0.1 documentation</a> &raquo;</li>
+          <li><a href="../circular.html" >Circular Statistics</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2012, Josef Perktold.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.0.7.
+    </div>
+  </body>
+</html>
